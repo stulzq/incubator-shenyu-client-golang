@@ -15,19 +15,4 @@
  * limitations under the License.
  */
 
-package shenyu_sdk_client
-
-//mockgen -destination /mock_***_client.go  -package ***_client -source common/client_interface.go
-
-/**
- * common SdkClient interface(except http client)
- **/
-type SdkClient interface {
-	NewClient(clientParam interface{}) (client interface{}, createResult bool, err error)
-
-	DeregisterServiceInstance(metaData interface{}) (deRegisterResult bool, err error)
-
-	GetServiceInstanceInfo(metaData interface{}) (instances interface{}, err error)
-
-	RegisterServiceInstance(metaData interface{}) (registerResult bool, err error)
-}
+package consul_client
